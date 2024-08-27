@@ -31,8 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-/.idea/
-/kafkaProducer/HELP.md
-/kafkaProducer/kafkaProducer.iml
-/kafkaConsumer/HELP.md
-/kafkaConsumer/kafkaConsumer.iml
