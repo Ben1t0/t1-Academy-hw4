@@ -1,0 +1,9 @@
+app:
+  kafka:
+    topic: "metrics-topic"
+
+spring:
+  kafka:
+    consumer:
+      client-id: "metric-consumer"
+      value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
