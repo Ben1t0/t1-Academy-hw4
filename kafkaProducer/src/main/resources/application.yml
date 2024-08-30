@@ -6,14 +6,13 @@ app:
     - disk.free
     - process.uptime
     - application.started.time
+
 spring:
   kafka:
+    bootstrap-servers: ${BOOTSTRAP_SERVERS:localhost:9092}
     producer:
       client-id: "metric-producer"
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-#        transaction-id-prefix: tx.
-#     properties:
-#        "[spring.json.type.mapping]": foo:com.example.kafkaexample.model.Foo1, bar:com.example.kafkaexample.model.Bar1
+
 server:
   port: 8081
 

@@ -5,5 +5,7 @@ app:
 spring:
   kafka:
     consumer:
+      bootstrap-servers: ${BOOTSTRAP_SERVERS:localhost:9092}
       client-id: "metric-consumer"
       value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+      group-id: "metricsGroup"

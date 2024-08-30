@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "23d277a6-1179-4094-a6ad-a9e2aea69499",
+		"name": "T1 Academy HW4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20525253"
+	},
+	"item": [
+		{
+			"name": "Producer",
+			"item": [
+				{
+					"name": "Send Metric",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/v1/metrics",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consumer",
+			"item": [
+				{
+					"name": "All metric packages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/metricPackage",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metricPackage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "package by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/metricPackage/:uuid",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metricPackage",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "ef257f2e-0156-4718-b034-9ea8c3bea53d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "metric names",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/metric/names",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metric",
+								"names"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Metrics by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/metric/:name",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metric",
+								":name"
+							],
+							"variable": [
+								{
+									"key": "name",
+									"value": "process.uptime"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "flush Metrics",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/metricPackage",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metricPackage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
